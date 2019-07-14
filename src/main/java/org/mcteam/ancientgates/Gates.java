@@ -3,8 +3,10 @@ package org.mcteam.ancientgates;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.bukkit.Axis;
 import org.bukkit.Material;
 import org.bukkit.block.Biome;
+import org.bukkit.block.data.Orientable;
 import org.mcteam.ancientgates.util.BlockUtil;
 import org.mcteam.ancientgates.util.types.FloodOrientation;
 import org.mcteam.ancientgates.util.types.WorldCoord;
@@ -119,7 +121,9 @@ public class Gates {
 				coord.getBlock().setBiome(Biome.FOREST);
 			}
 			if (orientation == FloodOrientation.VERTICAL1 && material == Material.NETHER_PORTAL) {
-				//coord.getBlock().get.setData((byte) 2);
+				Orientable orientable = (Orientable) coord.getBlock().getBlockData();
+				orientable.setAxis(Axis.Z);
+				coord.getBlock().setBlockData(orientable);
 			}
 		}
 
