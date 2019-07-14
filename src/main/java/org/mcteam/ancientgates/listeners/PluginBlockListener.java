@@ -252,7 +252,7 @@ public class PluginBlockListener implements Listener {
 
 		final Block block = event.getBlock();
 
-		if (!block.getType().equals(Material.STATIONARY_WATER) && !block.getType().equals(Material.STATIONARY_LAVA))
+		if (!block.getType().equals(Material.WATER) && !block.getType().equals(Material.LAVA))
 			return;
 
 		// Ok so water/lava starts flowing within a portal frame
@@ -327,14 +327,14 @@ public class PluginBlockListener implements Listener {
 		final Gate nearestGate = Gates.gateFromPortal(coord);
 
 		if (nearestGate != null) {
-			if (nearestGate.getMaterial() != Material.SUGAR_CANE_BLOCK)
+			if (nearestGate.getMaterial() != Material.SUGAR_CANE)
 				return;
 
 			event.getEntity().remove();
 			plugin.getServer().getScheduler().scheduleSyncDelayedTask(Plugin.instance, new Runnable() {
 				@Override
 				public void run() {
-					coord.getBlock().setType(Material.SUGAR_CANE_BLOCK);
+					coord.getBlock().setType(Material.SUGAR_CANE);
 				}
 			}, 1);
 		}

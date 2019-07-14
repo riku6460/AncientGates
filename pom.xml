@@ -116,10 +116,10 @@
             <id>vault-repo</id>
             <url>http://nexus.hc.to/content/repositories/pub_releases</url>
         </repository>
-        <repository>
+        <!--repository>
             <id>xephi-repo</id>
             <url>http://ci.xephi.fr/plugin/repository/everything/</url>
-        </repository>
+        </repository-->
     </repositories>
 
     <dependencies>
@@ -127,7 +127,7 @@
         <dependency>
         	<groupId>org.spigotmc</groupId>
         	<artifactId>spigot-api</artifactId>
-        	<version>1.11-R0.1-SNAPSHOT</version>
+        	<version>1.13.2-R0.1-SNAPSHOT</version>
         	<scope>provided</scope>
         	<exclusions>
         		<exclusion>
@@ -147,21 +147,6 @@
         			<artifactId>bungeecord-chat</artifactId>
         		</exclusion>
         	</exclusions>
-        </dependency>
-
-        <!-- Metrics -->
-        <dependency>
-            <groupId>org.mcstats.bukkit</groupId>
-            <artifactId>metrics</artifactId>
-            <version>R8-SNAPSHOT</version>
-            <scope>compile</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.bukkit</groupId>
-                    <artifactId>bukkit</artifactId>
-                </exclusion>
-            </exclusions>
-            <optional>true</optional>
         </dependency>
 
         <!-- Vault, http://dev.bukkit.org/bukkit-plugins/vault/ -->

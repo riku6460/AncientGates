@@ -219,7 +219,7 @@ public class EntityUtil {
 					((Skeleton) entity).getEquipment().setItemInHand(new ItemStack(Material.BOW));
 				}
 			} else if (entity instanceof PigZombie) {
-				((LivingEntity) entity).getEquipment().setItemInHand(new ItemStack(Material.GOLD_SWORD));
+				((LivingEntity) entity).getEquipment().setItemInHand(new ItemStack(Material.GOLDEN_SWORD));
 			}
 		}
 	}

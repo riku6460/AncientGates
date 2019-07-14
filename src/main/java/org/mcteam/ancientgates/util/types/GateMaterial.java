@@ -8,22 +8,22 @@ import org.bukkit.Material;
 
 public enum GateMaterial {
 	// AIR
-	AIR("psudeo air blocks", Material.PISTON_MOVING_PIECE),
+	AIR("psudeo air blocks", Material.MOVING_PISTON),
 
 	// LAVA
-	LAVA("stationary lava blocks", Material.STATIONARY_LAVA),
+	LAVA("stationary lava blocks", Material.LAVA),
 
 	// NETHER/ENDER PORTAL
-	PORTAL("nether/ender portal blocks", Material.PORTAL),
+	PORTAL("nether/ender portal blocks", Material.NETHER_PORTAL),
 
 	// SUGARCANE
-	SUGARCANE("sugarcane blocks", Material.SUGAR_CANE_BLOCK),
+	SUGARCANE("sugarcane blocks", Material.SUGAR_CANE),
 
 	// WATER
-	WATER("stationary water blocks", Material.STATIONARY_WATER),
+	WATER("stationary water blocks", Material.WATER),
 
 	// WEB
-	WEB("spiders web blocks", Material.WEB);
+	WEB("spiders web blocks", Material.COBWEB);
 
 	private static final Map<String, GateMaterial> nameToMaterial = new HashMap<>();
 
